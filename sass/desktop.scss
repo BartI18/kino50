@@ -1,0 +1,225 @@
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v42/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+$colorCard:#4e5d6c;
+
+a{
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.Body{
+  padding: 0;
+  margin: 0;
+  color: #ebebeb;
+  background-color: #2f4051;
+  font-family: "Helvetica","Arial",sans-serif;
+}
+
+.Header{
+  height: 112px;
+  padding: 0 16px 0 72px;
+  background-color: #df691a;
+  text-decoration: none;
+}
+
+.HeaderRow1{
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &-linkIcon{
+    font-size: 25px;
+    text-decoration: none;
+    color: #f8f5f9;
+    font-family: 'Fredoka One',cursive;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+
+  &-buttonIcon {
+    font-family: 'Material Icons', serif;
+    font-size: 24px;
+    background-color: transparent;
+    border: 0;
+    color: white;
+    position: absolute;
+    margin-left: -60px;
+
+    &--search{
+      position: inherit;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.NavigationIcon{
+  display: flex;
+  justify-content: space-between;
+  width: max-content;
+  margin-right: 16px;
+}
+
+.HeaderRow2{
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &-link{
+    padding: 0 16px ;
+    align-content: center;
+    text-decoration: none;
+  }
+}
+
+.Main{
+  display: flex;
+}
+
+.AsideBlock{
+  padding-top: 10px;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+  text-decoration: underline;
+
+  &-LinkDVD{
+    text-decoration-line: underline;
+    padding: 10px 10px 0;
+  }
+
+  &-listAside{
+    min-width: 200px;
+    padding: 10px 10px 0;
+    font-size: 14px;
+
+    & li{
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.MainContent{
+  display: inline-block;
+
+  &-h1{
+    padding: 0 32px;
+  }
+
+  &-description{
+    padding: 0 16px;
+  }
+}
+
+.NavigationSort{
+  border-bottom: 1px solid #4e5d6c;
+  padding: 0 32px;
+
+  &-labelSort{
+    padding: 0 16px 0 0;
+    line-height: 48px;
+  }
+
+  &-Link{
+    padding: 0 16px;
+  }
+
+  &-link:hover{
+    color:#df691a;
+  }
+}     //Верхний список сортировки по жанрам
+
+.ListWithFilms{
+  padding: 0 16px 0 0;
+
+  & > li{
+    display: inline-block;
+    padding: 5px 5px 5px 10px;
+  }
+
+}       //Список с фильмами
+
+.FilmItem{                //Одна ячейка фильма
+  min-width: 200px;
+  border-radius: 2px;
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.2), 0 1px 8px 0 rgba(0,0,0,.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $colorCard;
+
+  &-hoverText{
+    width: 100%;
+    height: 0;
+    z-index: 1;
+    margin: 0 0 0 15px;
+    display: none;
+  }
+
+  &-image{
+    border-radius: 2px;
+    height: 240px;
+    width: inherit;
+  }
+
+  &-linkFilm{
+    display: flex;
+    margin: 5px;
+  }
+
+  &-footer{
+    padding-top: 25%;
+    width: 100%;
+  }
+
+  &-stars{
+    width: 24px;
+  }
+
+  &-dvd{
+    float: right;
+  }
+}
+
+.NavigationGoto{
+  padding-left: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &-linkNext{
+    padding: 0 10px;
+  }
+
+  &-nextIcons{
+    font-family: 'Material Icons', serif;
+    font-size: 24px;
+  }
+}
+
+.Footer{
+  height: 56px;
+  background-color: #424242;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+
+  &-address{
+    color: #9e9e9e;
+  }
+}
+
+.LanguageBlock{
+  float: right;
+
+  &-link{
+    color: #9e9e9e;
+  }
+}
