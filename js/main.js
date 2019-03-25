@@ -1,15 +1,25 @@
 fetch("https://jsonplaceholder.typicode.com/photos").then(function (res) {
     console.log(res.status);
-    return res.json();
+    if(res.status===200)
+     return res.json();
 }).then(function (res) {
-    images = res.slice(0,29);
+    var navBar = document.getElementsByClassName("ListWithFilms")[0];
+    images = res.slice(0,50);
     images.forEach(function (obj,i) {
-        let image = document.getElementById("FilmImage"+i);
-        image.src = obj.thumbnailUrl;
-        image.addEventListener("click",function () {
-            image.src=obj.url;
-        });
-        console.log(obj);
-        document.getElementById("FilmLink"+i).innerText=obj.title;
+        let div = document.createElement("div");
+        let image = document.createElement("img");
+        let aHref = document.createElement("a");
+        div.className="FilmItem";
+        image.className= "FilmItem-image";
+        aHref.className="FilmItem-linkFilm";
+        image.src=obj.thumbnailUrl;
+        aHref.innerText = obj.title;
+        div.appendChild(image);
+        div.appendChild(aHref);
+
+        let lItem = document.createElement("li");
+        lItem.appendChild(div);
+        navBar.appendChild(lItem);
+
     })
 });
