@@ -13,6 +13,9 @@ fetch("https://jsonplaceholder.typicode.com/photos").then(function (res) {
         image.className= "FilmItem-image";
         aHref.className="FilmItem-linkFilm";
         image.src=obj.thumbnailUrl;
+        image.addEventListener("click",function () {
+           image.src=obj.url;
+        });
         aHref.innerText = obj.title;
         div.appendChild(image);
         div.appendChild(aHref);
